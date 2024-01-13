@@ -1,0 +1,13 @@
+@use "./base";
+@use "./themes";
+@use "./components";
+@use "./layout";
+@use "./utilities";
+@use "./abstracts/" as *;
+
+main {
+  .button:hover {
+    background-color: var(--neutral-very-light-gray);
+    color: var(--neutral-very-dark-violet);
+  }
+}

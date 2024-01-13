@@ -1,0 +1,30 @@
+@use "../abstracts/" as *;
+
+.button {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  border: 2px solid var(--neutral-very-light-gray);
+  text-transform: uppercase;
+  padding-block: $size-3;
+  padding-inline: $size-7;
+  z-index: 1;
+  overflow: hidden;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--neutral-very-light-gray);
+  transition: 0.5s;
+  &:hover {
+    background-color: var(--neutral-very-light-gray);
+    color: var(--neutral-very-dark-violet);
+    @include mq(md) {
+      background-color: var(--neutral-very-dark-violet);
+      color: var(--neutral-very-light-gray);
+    }
+  }
+  @include mq(md) {
+    width: fit-content;
+    border-color: var(--primary-dark-violet);
+    color: var(--primary-dark-violet);
+  }
+}

@@ -1,0 +1,21 @@
+@use "../abstracts/" as *;
+
+.services {
+  position: relative;
+  text-align: center;
+  z-index: 4;
+  @include mq(md) {
+    text-align: left;
+  }
+  img {
+    margin-inline: auto;
+    @include mq(md) {
+      margin-inline: 0;
+    }
+  }
+  p {
+    color: var(--primary-grayish-blue);
+    font-size: var(--fs-500);
+    line-height: 1.7;
+  }
+}

@@ -1,0 +1,12 @@
+@use "../abstracts/" as *;
+@use "./font-face" as *;
+/*------------------GENERAL--------------------*/
+* {
+  font-family: "Karla";
+}
+
+body {
+  font-family: $font-family-base;
+  // background-color: var(--neutral-very-light-gray);
+  overflow-x: hidden;
+}

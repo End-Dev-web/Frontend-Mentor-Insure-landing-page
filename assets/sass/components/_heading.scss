@@ -1,0 +1,22 @@
+@use "../abstracts/" as *;
+.heading-1 {
+  @include heading($font-size-900);
+  font-family: "DM Serif Display";
+  line-height: 0.9;
+  color: var(--neutral-very-light-gray);
+}
+.heading-2 {
+  @include heading($font-size-800);
+  font-family: "DM Serif Display";
+  line-height: 1.2;
+}
+.heading-3 {
+  @include heading($font-size-700);
+  font-family: "DM Serif Display";
+  // line-height: 0.9;
+}
+.heading-4 {
+  @include heading($font-size-500);
+  color: var(--neutral-dark-grayish-violet);
+  // line-height: 0.9;
+}

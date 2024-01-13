@@ -1,0 +1,9 @@
+@use "../abstracts/" as *;
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $very-dark-violet;
+}

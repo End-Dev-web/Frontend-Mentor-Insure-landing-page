@@ -1,0 +1,98 @@
+@use "../abstracts/" as *;
+
+main {
+  position: relative;
+  .hero-content {
+    // position: relative;
+    display: flex;
+    text-align: center;
+    color: var(--neutral-very-light-gray);
+    @include mq(sm) {
+      // align-items: center;
+      text-align: left;
+    }
+    justify-content: space-between;
+    .hero-img {
+      position: absolute;
+      inset: 0 0 0 0;
+      z-index: 2;
+      @media (max-width: 760px) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      @include mq(md) {
+        justify-content: right;
+        position: relative;
+        // margin-block-start: 3em;
+        right: 0;
+        order: 2;
+        inset: 5em 0 0 0;
+      }
+    }
+    .hero-details {
+      position: relative;
+      padding-block-start: 33em;
+      // z-index: 2;
+      @include mq(md) {
+        padding-block-start: 6em;
+      }
+    }
+    @include mq(md) {
+      padding-block-start: 3em;
+      .line {
+        width: 35%;
+        height: 2px;
+        margin-block-end: $size-10;
+        background-color: var(--neutral-very-light-gray);
+      }
+    }
+  }
+  p {
+    font-size: var(--fs-400);
+    line-height: 1.7;
+  }
+  .button {
+    border-color: var(--neutral-very-light-gray);
+    color: var(--neutral-very-light-gray);
+  }
+}
+
+.hero {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../assets/images/mobile/bg-pattern-intro-left-mobile.svg");
+    background-repeat: no-repeat;
+    width: 168px;
+    height: 165px;
+    // left: -1rem;
+    top: 27rem;
+    z-index: 1;
+    @include mq(md) {
+      background-image: url("../assets/images/desktop/bg-pattern-intro-left-desktop.svg");
+      width: 195px;
+      height: 504px;
+      // left: -10rem;
+      top: 22rem;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../assets/images/mobile/bg-pattern-intro-right-mobile.svg");
+    background-repeat: no-repeat;
+    width: 124px;
+    height: 330px;
+    right: 0rem;
+    bottom: -10rem;
+    @include mq(md) {
+      background-image: url("../assets/images/desktop/bg-pattern-intro-right-desktop.svg");
+      width: 436px;
+      height: 596px;
+      top: 0rem;
+      right: 0rem;
+    }
+  }
+}

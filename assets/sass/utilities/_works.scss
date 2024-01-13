@@ -1,0 +1,43 @@
+@use "../abstracts/" as *;
+
+.works {
+  position: relative;
+  text-align: center;
+  z-index: 4;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../assets/images/mobile/bg-pattern-how-we-work-mobile.svg");
+    background-repeat: no-repeat;
+    width: 176px;
+    height: 317px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    @include mq(md) {
+      background-image: url("../assets/images/desktop/bg-pattern-how-we-work-desktop.svg");
+      width: 434px;
+      height: 250px;
+      z-index: -1;
+    }
+  }
+  @include mq(md) {
+    text-align: left;
+    padding-inline: $size-11;
+  }
+  h3 {
+    font-size: var(--fs-600);
+    color: var(--neutral-very-light-gray);
+  }
+  .button {
+    margin-inline: auto;
+    width: fit-content;
+    border-color: var(--neutral-very-light-gray);
+    color: var(--neutral-very-light-gray);
+    @include mq(md) {
+      margin-inline: 0;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@use "../abstracts/" as *;
+
+.grid-auto-fit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr)); // 240
+}
+.grid-three-fit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr)); // 240
+}
+.grid-foor-fit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); // 240
+}

@@ -1,0 +1,17 @@
+$dark-violet: hsl(256, 26%, 20%);
+$grayish-blue: hsl(216, 30%, 68%);
+$very-dark-violet: hsl(270, 9%, 17%);
+$dark-grayish-violet: hsl(273, 4%, 51%);
+$very-light-gray: hsl(0, 0%, 98%);
+
+$light: (
+  "primary": (
+    "dark-violet": $dark-violet,
+    "grayish-blue": $grayish-blue,
+  ),
+  "neutral": (
+    "very-dark-violet": $very-dark-violet,
+    "dark-grayish-violet": $dark-grayish-violet,
+    "very-light-gray": $very-light-gray,
+  ),
+);
